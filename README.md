@@ -126,28 +126,32 @@ root@racknerd-c8095b4:/opt/dujiaonext# docker compose --env-file .env -f docker-
 - 支付管理 → 支付渠道 → 新增渠道
 - 然后看我怎么填写的
 
-增加USDT支付方式：
+- 增加USDT支付方式：
+```bash
 网关地址：https://bepusdt.vfaka.cn  没有斜杠！！！注意了
 API Token：在我们的bepusdt后台获取
 支付币种：usdt.trc20
 法币类型：CNY
 异步通知地址：https://你独角的api后端域名/api/v1/payments/callback
 同步回跳地址：https://你独角的api后端域名/pay
+```
 
 
-增加TRX支付方式：
+- 增加TRX支付方式：
+```bash
 网关地址：https://bepusdt.vfaka.cn  没有斜杠！！！注意了
 API Token：在我们的bepusdt后台获取
 支付币种：tron.trx
 法币类型：CNY
 异步通知地址：https://你独角的api后端域名/api/v1/payments/callback
 同步回跳地址：https://你独角的api后端域名/pay
+```
 
-
+```bash
 异步通知地址跟同步回跳地址  的后缀是固定的
 异步通知地址固定后缀：/api/v1/payments/callback
 同步回跳地址固定后缀：/pay
-
+```
 
 ## 什么是api后端地址  跟用户前端地址 ？  
 请看我上一个1panel部署新版独角dujiao-next的视频 https://www.youtube.com/watch?v=Mv946RQJmrY
